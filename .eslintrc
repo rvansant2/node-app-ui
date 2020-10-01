@@ -4,12 +4,14 @@
     "es6": true,
     "jest": true
   },
-  "parser": "babel-eslint",
+  "parser": "@typescript-eslint/parser",
   "extends": [
       "plugin:react/recommended",
       "airbnb",
       "prettier",
-      "prettier/react"
+      "prettier/react",
+      "plugin:@typescript-eslint/eslint-recommended",
+      "plugin:@typescript-eslint/recommended"
   ],
   "globals": {
       "Atomics": "readonly",
@@ -19,17 +21,41 @@
     "ecmaFeatures": {
         "jsx": true
     },
-    "ecmaVersion": 12,
+    "ecmaVersion": 6,
     "sourceType": "module"
   },
   "plugins": [
       "react",
+      "@typescript-eslint",
       "prettier"
   ],
   "rules": {
+      "semi": "off",
+      "@typescript-eslint/semi": "error",
       "prettier/prettier": "error",
-      "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }],
-      "react/state-in-constructor": "off"
+      "@typescript-eslint/explicit-function-return-type": "off",
+      "no-use-before-define": "off",
+      "@typescript-eslint/no-use-before-define": "off",
+      "@typescript-eslint/no-unused-vars": "off",
+      "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx", ".ts", ".tsx"] }],
+      "react/state-in-constructor": "off",
+      "import/extensions": [
+        "error",
+        "ignorePackages",
+        {
+          "js": "never",
+          "jsx": "never",
+          "ts": "never",
+          "tsx": "never"
+        }
+     ]
+  },
+  "settings": {
+    "import/resolver": {
+      "node": {
+        "extensions": [".js", ".jsx", ".ts", ".tsx"]
+      }
+    }
   }
 }
 
