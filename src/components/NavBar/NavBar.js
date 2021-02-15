@@ -45,12 +45,12 @@ const NavBar = () => {
           <Typography variant="subtitle1" className={classes.title}>
             <Link to="/">React & Material-UI Starter</Link>
           </Typography>
-          <Grid justify="flex-end" className={classes.menuLinkContainer}>
+          <Grid className={classes.menuLinkContainer}>
             <Typography variant="button" className={classes.menuLink}>
               <Link to="/login">Login</Link>
             </Typography>
           </Grid>
-          <Grid justify="flex-end" className={classes.menuLinkContainer}>
+          <Grid className={classes.menuLinkContainer}>
             <Typography variant="button" className={classes.menuLink}>
               <Link to="/signup">Sign Up</Link>
             </Typography>

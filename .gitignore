@@ -107,3 +107,4 @@ dist
 build
 
 .DS_Store
+ __TESTS__/__snapshots__/*.snap

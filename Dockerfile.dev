@@ -4,6 +4,7 @@ WORKDIR /ui
 
 COPY ./public ./public
 COPY ./src ./src
+COPY .env.example .env
 
 COPY ./package*.json ./
 RUN npm install
